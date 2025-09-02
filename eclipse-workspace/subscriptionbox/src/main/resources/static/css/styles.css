@@ -1,0 +1,66 @@
+/* Reset simple */
+* { box-sizing: border-box; margin:0; padding:0; font-family: "Segoe UI", Arial, sans-serif; text-align: center; }
+
+body { background: #FFF8FB; color: #333; }
+
+/* Header */
+.site-header { background: #FFDDE8; padding: 12px 16px; }
+.header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; max-width:1100px; margin:0 auto; }
+.logo { font-weight:700; font-size:1.15rem; }
+.menu { list-style:none; display:flex; gap:16px; }
+.menu a { text-decoration:none; color:#333; padding:6px 8px; border-radius:6px; }
+.menu a:hover { background:#FFDFE8; }
+
+/* Main container */
+.container { max-width:900px; margin:20px auto; padding:0 16px; }
+
+/* Hero image */
+.hero-image { text-align:center; margin: 12px 0; }
+.hero-image img { width: 220px; max-width:60%; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+
+/* Form box */
+.subscription-form {
+    background: linear-gradient(180deg, #FFFDFD 0%, #FFF0F4 100%);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(255, 192, 200, 0.15);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:520px;
+    margin: 0 auto 24px auto;
+}
+
+.subscription-form label { font-weight:600; font-size:0.95rem; margin-top:6px; }
+.subscription-form input[type="text"],
+.subscription-form input[type="email"] {
+    padding:8px 10px; border-radius:8px; border:1px solid #E8D6DB;
+}
+
+.checkbox-group, .radio-group { display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; justify-content: center;}
+
+.checkbox-inline, .radio-inline { display:flex; align-items:center; gap:6px; background:#FFF; padding:6px 8px; border-radius:8px; border:1px solid #F1DDE0; }
+
+.btn-submit {
+    margin-top:10px;
+    padding:10px 14px;
+    border-radius:10px;
+    border:none;
+    background:#FFB6C1;
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* Message */
+.message { text-align:center; color:green; margin-top:10px; }
+
+/* Footer */
+.site-footer { background:#FFEFF3; text-align:center; padding:10px; margin-top:20px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header-inner { flex-direction:column; align-items:flex-start; gap:8px; }
+    .menu { flex-direction:column; gap:6px; width:100%; }
+    .subscription-form { width: 100%; padding:14px; }
+    .hero-image img { width: 160px; }
+}

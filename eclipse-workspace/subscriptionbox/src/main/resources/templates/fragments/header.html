@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="header">
+	    <header style="background-color:#FFDDE1; padding:10px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+	        <div class="logo" style="font-weight:bold; font-size:1.2em;">Japanese Snacks</div>
+	        <nav>
+	            <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:15px; margin:0; padding:0;"
+	                th:if="${menuLinks != null}">
+	                <li th:each="e : ${menuLinks}">
+	                    <a th:href="${e.value}" th:text="${e.key}" style="text-decoration:none; color:#333;"></a>
+	                </li>
+	            </ul>
+	            <!-- Fallback si no envías links desde el controlador -->
+	            <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:15px; margin:0; padding:0;"
+	                th:if="${menuLinks == null}">
+	                <li><a th:href="@{/}" style="text-decoration:none; color:#333;">Home</a></li>
+	                <li><a th:href="@{/about}" style="text-decoration:none; color:#333;">About</a></li>
+	                <li><a th:href="@{/contact}" style="text-decoration:none; color:#333;">Contact</a></li>
+	            </ul>
+	        </nav>
+	    </header>
+	</div>
+</body>
+</html>
